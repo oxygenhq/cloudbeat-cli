@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import program from 'commander';
 import colors from 'colors';
 import runCmd from './cli-commands/run';

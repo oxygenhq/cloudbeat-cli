@@ -2,7 +2,66 @@
   "name": "cloudbeat-cli",
   "version": "0.9.0",
   "description": "CloudBeat API CLI wrapper",
-  "main": "build/index.js",
+  "main": "./build/index.js",
+  "bin": {
+    "cloudbeat-cli": "./build/index.js"
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxygenhq/cloudbeat-cli.git"
+  },
+  "keywords": [
+    "selenium",
+    "appium",
+    "webdriver",
+    "testing",
+    "automation",
+    "qa"
+  ],
+  "author": {
+    "name": "CloudBeat Limited",
+    "email": "info@cloudbeat.io",
+    "url": "http://cloudbeat.io"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/oxygenhq/cloudbeat-cli/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "devDependencies": {
+    "@babel/node": "7.8.7",
+    "cross-env": "7.0.2",
+    "eslint": "6.8.0",
+    "husky": "4.2.5",
+    "jest": "25.1.0",
+    "moxios": "0.4.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "3.0.2"
+  },
+  "dependencies": {
+    "@babel/cli": "7.10.0",
+    "@babel/core": "7.9.0",
+    "@babel/compat-data": "7.9.0",
+    "@babel/plugin-proposal-class-properties": "7.10.1",
+    "@babel/plugin-proposal-export-default-from": "7.10.1",
+    "@babel/plugin-proposal-function-bind": "7.10.1",
+    "@babel/plugin-proposal-optional-catch-binding": "7.10.1",
+    "@babel/preset-env": "7.9.0",
+    "@babel/register": "7.9.0",
+    "colors": "1.4.0",
+    "commander": "4.1.1",
+    "axios": "0.19.2",
+    "date-format": "0.0.2",
+    "mkdirp": "0.5.1",
+    "moment": "2.29.1",
+    "xmlbuilder": "10.1.1",
+    "junit-report-builder": "1.3.3"
+  },
   "scripts": {
     "build": "run-s clean compile",
     "clean": "rimraf ./build",
@@ -15,54 +74,8 @@
     "test:unit": "jest",
     "lint": "eslint \"src/**/*.js\""
   },
-  "bin": {
-    "cloudbeat-cli": "./build/index.js"
+  "engines": {
+    "node": ">=10.18.1 <13.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oxygenhq/cloudbeat-cli.git"
-  },
-  "author": {
-    "name": "CloudBeat Limited",
-    "email": "info@cloudbeat.io",
-    "url": "http://cloudbeat.io"
-  },
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/oxygenhq/cloudbeat-cli/issues"
-  },
-  "homepage": "https://github.com/oxygenhq/cloudbeat-cli#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
-  "dependencies": {
-    "@babel/cli": "7.8.4",
-    "@babel/core": "7.8.7",
-    "@babel/plugin-proposal-class-properties": "7.8.3",
-    "@babel/plugin-proposal-export-default-from": "7.8.3",
-    "@babel/plugin-proposal-function-bind": "7.8.3",
-    "@babel/plugin-proposal-optional-catch-binding": "7.8.3",
-    "@babel/preset-env": "7.8.7",
-    "@babel/register": "7.8.6",
-    "colors": "1.4.0",
-    "commander": "4.1.1",
-    "axios": "0.19.2",
-    "date-format": "0.0.2",
-    "mkdirp": "0.5.1",
-    "moment": "2.29.1",
-    "xmlbuilder": "10.1.1",
-    "junit-report-builder": "1.3.3"
-  },
-  "devDependencies": {
-    "@babel/node": "7.8.7",
-    "cross-env": "7.0.2",
-    "eslint": "6.8.0",
-    "husky": "4.2.5",
-    "jest": "25.1.0",
-    "moxios": "0.4.0",
-    "npm-run-all": "4.1.5",
-    "rimraf": "3.0.2"
-  }
+  "homepage": "https://github.com/oxygenhq/cloudbeat-cli#readme"
 }
